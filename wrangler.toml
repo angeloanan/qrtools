@@ -1,0 +1,6 @@
+name = "qrcode"
+compatibility_date = "2022-09-23"
+
+main = "./dist/server.js"
+[site]
+bucket = "./dist/public"
