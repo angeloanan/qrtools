@@ -1,7 +1,5 @@
 import { createEffect, createSignal, onMount } from 'solid-js'
-import QRCode from 'qrcode'
-import { Link } from 'solid-start'
-
+import QRCode from 'qrcode/lib/browser'
 const defaultLink = 'https://qr.angelo.fyi'
 
 const updateQr = (canvas: HTMLCanvasElement, text: string) => {
@@ -35,7 +33,6 @@ export default function Home() {
             class='rounded p-2 outline outline-1 outline-gray-300'
             placeholder='Type something here!'
             oninput={(e) => {
-              console.log(e.currentTarget.value)
               setText(e.currentTarget.value == '' ? defaultLink : e.currentTarget.value)
             }}
           />
